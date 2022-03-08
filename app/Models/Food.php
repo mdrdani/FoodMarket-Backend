@@ -27,6 +27,7 @@ class Food extends Model
         return Carbon::parse($value)->timestamp;
     }
 
+    // mutators picturePath
     public function toArray()
     {
         $toArray = parent::toArray();
@@ -38,5 +39,6 @@ class Food extends Model
     {
         return url('') . Storage::url($this->attributes['picturePath']);
     }
+    // end mutators
 
 }
